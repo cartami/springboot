@@ -1,0 +1,43 @@
+package com.example.Week2_HW1;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(value = "prototype")
+public class Nissan {
+	
+	private String color;
+	
+	// DI via field(property)
+		@Autowired
+		private Engine eng;
+		@Autowired
+		private Vehicle vehicle;
+		
+		
+		public String getColor() {
+			return color;
+		}
+		public void setColor(String color) {
+			this.color = color;
+		}
+		public Engine getEng() {
+			return eng;
+		}
+		public void setEng(Engine eng) {
+			this.eng = eng;
+		}
+		public Vehicle getVehicle() {
+			return vehicle;
+		}
+		public void setVehicle(Vehicle vehicle) {
+			this.vehicle = vehicle;
+		}
+		
+		
+		
+	
+
+}

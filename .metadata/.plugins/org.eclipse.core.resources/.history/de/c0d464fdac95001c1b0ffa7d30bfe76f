@@ -1,0 +1,25 @@
+package com.example.Week2_HW1;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class Week2Hw1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Week2Hw1Application.class, args);
+		
+		  //before coming to this point person object is created called Person.class
+		   Nissan c1 =  Context.getBean(Nissan.class);
+		   c1.Specs();
+		   
+		   
+		   
+		   Engine a1 = Context.getBean(Engine.class);
+		   c1.setAddr(a1);
+		   c1.showWeather();
+		   
+	}
+
+}
